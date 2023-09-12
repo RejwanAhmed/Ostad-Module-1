@@ -62,18 +62,20 @@ if ( isset( $_POST['submit'] ) ) {
     $conversion_type = $_POST['conversion_type'];
     $value = $_POST['value'];
     
-    $given_value = $value;
+    $conversion_to = "";
     if ( 'celsius' == $conversion_type ) {
         $result = ( $value * 1.8 ) + 32;
+        $conversion_to = "fahrenheit";
     } else if ( 'farenheit' == $conversion_type ) {
         $result = ( $value - 32 ) * ( 5 / 9 );
+        $conversion_to = "celsius";
     } else {
         $result = "Error";
     }
-
+    $final_result_to_show = "Conversion from {$conversion_type} to {$conversion_to} of {$value} = {$result}";
     ?>
         <script>
-            document.getElementById("show_result").innerHTML = "Result = " + <?php echo $result ?>;
+            document.getElementById("show_result").innerHTML = "<?php echo $final_result_to_show ?>";
         </script>
     <?php
 }
