@@ -4,28 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Even Odd Checker</title>
-    <style>
-        .center {
-            border: 5px solid;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-        }
-        .form-control{
-            width: 100%;
-            padding: 10px 15px;
-            margin: 8px 0;
-            box-sizing: border-box;
-        }
-        .btn{
-            background-color: lightblue;
-            color: black;
-            font-weight: bold;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="" method = "POST">
